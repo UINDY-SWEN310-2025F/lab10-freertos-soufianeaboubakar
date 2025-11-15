@@ -1,0 +1,2 @@
+source /Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader/gdbinit/symbols
+source /Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader/gdbinit/connect

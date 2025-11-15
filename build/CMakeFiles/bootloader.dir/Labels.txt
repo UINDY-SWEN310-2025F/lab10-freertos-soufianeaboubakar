@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/CMakeFiles/bootloader
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/CMakeFiles/bootloader.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/CMakeFiles/bootloader-complete.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/soufianeaboubakar/Documents/SWEN310/lab10-freertos-soufianeaboubakar/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
