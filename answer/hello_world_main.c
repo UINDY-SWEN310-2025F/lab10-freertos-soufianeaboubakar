@@ -13,6 +13,40 @@
 #include "esp_flash.h"
 #include "esp_system.h"
 
+// ------------ LAB TASKS -----------------
+
+void task1(void *p)
+{
+    int count = 0;
+    for (int i = 0; i < 3; i++) {
+        printf("hello task1 (Soufiane): count %d\n", count++);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
+    }
+    vTaskDelete(NULL);
+}
+
+void task2(void *p)
+{
+    int count = 0;
+    for (int i = 0; i < 3; i++) {
+        printf("hello task2 (Soufiane): count %d\n", count++);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
+    }
+    vTaskDelete(NULL);
+}
+
+void task3(void *p)
+{
+    int count = 0;
+    for (int i = 0; i < 3; i++) {
+        printf("hello task3 (Soufiane): count %d\n", count++);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
+    }
+    vTaskDelete(NULL);
+}
+
+// -----------------------------------------
+
 void app_main(void)
 {
     printf("Hello world! This is Soufiane's first application.\n");
@@ -32,7 +66,8 @@ void app_main(void)
     unsigned major_rev = chip_info.revision / 100;
     unsigned minor_rev = chip_info.revision % 100;
     printf("silicon revision v%d.%d, ", major_rev, minor_rev);
-    if(esp_flash_get_size(NULL, &flash_size) != ESP_OK) {
+
+    if (esp_flash_get_size(NULL, &flash_size) != ESP_OK) {
         printf("Get flash size failed");
         return;
     }
@@ -42,11 +77,20 @@ void app_main(void)
 
     printf("Minimum free heap size: %" PRIu32 " bytes\n", esp_get_minimum_free_heap_size());
 
-    for (int i = 10; i >= 0; i--) {
+    // ------------ LAB REQUIREMENT: CREATE 3 TASKS -------------
+
+    xTaskCreate(task1, "t1", 2048, NULL, 1, NULL);
+    xTaskCreate(task2, "t2", 2048, NULL, 1, NULL);
+    xTaskCreate(task3, "t3", 2048, NULL, 1, NULL);
+
+    // 5-second restart countdown
+    for (int i = 5; i >= 0; i--) {
         printf("Restarting in %d seconds...\n", i);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
+
     printf("Restarting now.\n");
     fflush(stdout);
     esp_restart();
 }
+
